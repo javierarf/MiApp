@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Temporizador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Temporizador</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <h1>¿Cuánto tiempo quieres entrenar hoy?</h1>
+  <div class="clock container" color="dark">
+    <h3>Esta es tu hora de inicio</h3>
+    {{currentTime}}
+  </div>
+  <div class="container">  
+    <form (submit)="setAlarm(alarmTime)">
+    <label for="alarmTime">Selecciona tu hora de fin:</label>
+    <input type="time" id="alarmTime" [(ngModel)]="alarmTime" name="alarmTime" required>
+    <ion-button type="submit">Aceptar</ion-button>
+  </form>
+  </div>
+
+  <p *ngIf="alarmSet">Alarma programada a las {{alarmTime}}</p>
+
+
+  
+</ion-content>

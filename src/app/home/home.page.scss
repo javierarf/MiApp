@@ -1,11 +1,40 @@
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+  height: 100vh;  
+
+  ion-card {
+    width: 90%;  
+    margin: 20px 0;
+    
+    .card-content {
+      display: flex;  
+      justify-content: space-between;  
+      align-items: center;  
+      img {
+        max-width: 40%;  
+        height: auto;
+        margin-left: 20px;  
+      }
+
+      .text-content {
+        flex: 1;  
+      }
+    }
+  }
+}
+
 #container {
   text-align: center;
 
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
 }
 
 #container strong {
