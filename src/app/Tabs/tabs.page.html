@@ -7,7 +7,7 @@
 <ion-content [fullscreen]="true">
   <ion-tabs (ionTabsDidChange)="setCurrentTab($event)">
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="home" [ngClass]="{'selected': selectedTab === 'home'}">
+      <ion-tab-button tab="home" [ngClass]="{'selected': selectedTab === 'home'}" >
         <ion-icon [name]="selectedTab === 'home' ? 'home' : 'home-outline'"></ion-icon>
         <ion-label *ngIf="selectedTab === 'home'">Home</ion-label>
       </ion-tab-button>
@@ -18,8 +18,8 @@
       </ion-tab-button>
   
       <ion-tab-button tab="tab2" [ngClass]="{'selected': selectedTab === 'tab2'}">
-        <ion-icon [name]="selectedTab === 'tab2' ? 'heart' : 'heart-outline'"></ion-icon>
-        <ion-label *ngIf="selectedTab === 'tab2'">Favoritos</ion-label>
+        <ion-icon [name]="selectedTab === 'tab2' ? 'checkbox' : 'checkbox-outline'"></ion-icon>
+        <ion-label *ngIf="selectedTab === 'tab2'">Lista de Tareas</ion-label>
       </ion-tab-button>
   
       <ion-tab-button tab="tab3" [ngClass]="{'selected': selectedTab === 'tab3'}">
